@@ -1,16 +1,10 @@
-import wikiScrape
-import summarizer
-from wikiSummarize import cleaner
+import driver
 
+def main():
+    summary = driver.drive()
+    print(summary)
 
-url = 'https://en.wikipedia.org/wiki/Python_(programming_language)'
+main()
 
-text = wikiScrape.scrape(url)
-
-clean_text = cleaner.clean(text)
-
-summary = summarizer.summarize(clean_text, 0.1)
-
-print(summary)
 
 
